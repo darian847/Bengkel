@@ -10,11 +10,16 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        
-        $posts = Post::all();
-        return view('posts.index', ['posts' => $posts]);
+        $posts = Post::latest();
+
+        if (request('search'))   {
+            $posts->where('title','like','%' . request('search') . '%');
+        }
+
+        return view('posts.index', ['title' => 'posts', 'posts' => $posts->get()]);
+    
     }
 
     /**
@@ -45,8 +50,8 @@ class PostController extends Controller
     public function show(Post $post)
     {
         
-        $posts = Post::all();
-        return view('posts.show', ['posts' => $posts]);
+        
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
