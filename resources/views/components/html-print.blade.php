@@ -21,15 +21,8 @@
 	@endisset
 
 	<table class="table-auto w-full">
-		@isset($header)
-      <thead>
-        <tr>
-          <td>
-            {{ $header }}
-          </td>
-        </tr>
-      </thead>
-		@endisset
+		
+		
 		 
 		<tbody>
 			<tr>
@@ -39,14 +32,6 @@
 			</tr>
 		</tbody>
 
-		@isset($footer)
-			<tfoot>
-				<tr>
-					<td>
-						{{ $footer }}
-					</td>
-				</tr>
-			</tfoot>
-		@endisset
+		
 	</table>
 </div>
