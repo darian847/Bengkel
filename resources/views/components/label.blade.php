@@ -1,6 +1,6 @@
 
 
-    <style type="text/css">
+    {{-- <style type="text/css">
       a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
       a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
       div.comment { display:none }
@@ -75,6 +75,7 @@
 
 
 </style>
+
     <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
         <col class="col0">
         <col class="col1">
@@ -130,4 +131,5 @@
             <td class="column0">&nbsp;</td>
             <td class="column1 style11 s style11" colspan="3">JR4-175/08/04/25 - SI</td>
             <td class="column4">&nbsp;</td>
-          </tr>
+          </tr> --}}
+         

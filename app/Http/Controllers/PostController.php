@@ -18,7 +18,7 @@ class PostController extends Controller
             $posts->where('title','like','%' . request('search') . '%');
         }
 
-        return view('posts.index', ['title' => 'posts', 'posts' => $posts->get()]);
+        return view('posts.show', ['title' => 'posts', 'posts' => $posts->get()]);
     
     }
 
