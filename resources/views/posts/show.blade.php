@@ -4,7 +4,15 @@
   <x-header>Label</x-header>
     <main>
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        
         <x-forsearch></x-forsearch>
+     
+      <x-html-print>
+        
+        <div class="max-w-screen-xl px-4 mx-auto lg:px-98 w-auto">
+          
+            <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
+              <div class="w-full">
           @foreach ($posts as $post)
           {{-- {{ $post->title }} --}}
           <style type="text/css">
@@ -106,7 +114,7 @@
           </tr>
           <tr class="row3">
             <td class="column0">&nbsp;</td>
-            <td class="column1 style14 s style14" colspan="3">JERIGEN 4 LITER</td>
+            <td class="column1 style14 s style14" colspan="3">{{ $post->nama }}</td>
             <td class="column4">&nbsp;</td>
           </tr>
           <tr class="row4">
@@ -117,14 +125,14 @@
           </tr>
           <tr class="row5">
             <td class="column0">&nbsp;</td>
-            <td class="column1 style15 s style16" colspan="2">NATURAL</td>
-            <td class="column3 style5 s">25 PCS</td>
+            <td class="column1 style15 s style16" colspan="2">{{ $post->warna }}</td>
+            <td class="column3 style5 s">{{ $post->jumlah }} PCS</td>
             <td class="column4">&nbsp;</td>
           </tr>
           <tr class="row6">
             <td class="column0">&nbsp;</td>
             <td class="column1 style6 s">No. Mesin :</td>
-            <td class="column2 style21 s style21" colspan="2">B-7</td>
+            <td class="column2 style21 s style21" colspan="2">{{ $post->mesin }}</td>
             <td class="column4">&nbsp;</td>
           </tr>
           <tr class="row7">
@@ -135,12 +143,14 @@
           </tr>
           <tr class="row8">
             <td class="column0">&nbsp;</td>
-            <td class="column1 style11 s style11" colspan="3">JR4-175/08/04/25 - SI</td>
+            <td class="column1 style11 s style11" colspan="3">{{ $post->batch }}/08/04/25 - SI</td>
             <td class="column4">&nbsp;</td>
           </tr>
           @endforeach
-          
+        </x-html-print>
+        
       </div>
+
     </main>
   </div>
   

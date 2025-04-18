@@ -15,10 +15,10 @@ class PostController extends Controller
         $posts = Post::latest();
 
         if (request('search'))   {
-            $posts->where('title','like','%' . request('search') . '%');
+            $posts->where('nama','like','%' . request('search') . '%');
         }
 
-        return view('posts.show', ['title' => 'posts', 'posts' => $posts->get()]);
+        return view('posts.show', ['nama' => 'posts', 'posts' => $posts->get()]);
     
     }
 
@@ -37,11 +37,16 @@ class PostController extends Controller
     {
 
         Post::create([
-            'title' => $request->title,
-            'content' => $request->content,
+            'nama' => $request->nama,
+            'warna' => $request->warna,
+            'jumlah' => $request->jumlah,
+            'mesin' => $request->mesin,
+            'batch' => $request->batch,
+            'penginput' => $request->batch,
+            'cadangan' => $request->batch,
         ]);
 
-        return view('posts.index');
+        return view('posts.create');
     }
 
     /**
