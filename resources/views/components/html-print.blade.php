@@ -20,7 +20,7 @@
 </div>
 @endisset
 
-	<table class="table-auto w-full">
+	<table class="table-auto w-2/3">
 		
 		
 		 

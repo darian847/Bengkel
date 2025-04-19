@@ -7,14 +7,13 @@
         
         <x-forsearch></x-forsearch>
      
-      <x-html-print>
+      {{-- <x-html-print> --}}
         
-        <div class="max-w-screen-xl px-4 mx-auto lg:px-98 w-auto">
+        <div class="max-w-screen-xl px-4 mx-auto w-auto grid h-56 grid-cols-2 content-start " style="padding-top: 25px">
           
-            <div class="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
-              <div class="w-full">
-          @foreach ($posts as $post)
-          {{-- {{ $post->title }} --}}
+
+          
+          
           <style type="text/css">
       a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
       a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
@@ -90,6 +89,7 @@
 
 
 </style>
+@foreach ($posts as $post)
     <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
         <col class="col0">
         <col class="col1">
@@ -147,12 +147,18 @@
             <td class="column4">&nbsp;</td>
           </tr>
           @endforeach
-        </x-html-print>
+        </div>
+        <div>
+          <x-formlabel></x-formlabel>
+        </div>
+          
+        {{-- </x-html-print> --}}
+
         
       </div>
-
-    </main>
-  </div>
+    
+        </main>
+      </div>
   
     </body>
 </html>
