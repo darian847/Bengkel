@@ -9,5 +9,5 @@ class Input extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nomesin', 'tanggal', 'shift', 'namainput'];
+    protected $fillable = ['nama', 'warna', 'jumlah', 'mesin', 'batch', 'tanggal', 'shift', 'namainput'];
 }

@@ -12,14 +12,14 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $posts = Post::latest();
 
-        if (request('search'))   {
-            $posts->where('nama','like','%' . request('search') . '%');
+
+        if (request('search')) {
+            $posts = Post::where('nama', 'like', '%' . request('search') . '%');
         }
 
-        return view('posts.show', ['nama' => 'posts', 'posts' => $posts->get()]);
-    
+
+        return view('inputs.tunjuk', ['post' => $posts->first()]);
     }
 
     /**
@@ -54,8 +54,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        
-        
+
+
         return view('posts.show', ['post' => $post]);
     }
 

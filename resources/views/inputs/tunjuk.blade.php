@@ -16,7 +16,7 @@
                             <label for="nama-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama
                                 Produk</label>
-                            <input id="nama-prod" type="search" name="nama"
+                            <input id="nama-prod" type="text" name="nama"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->nama }}" readonly required>
                         </div>
@@ -24,7 +24,7 @@
                             <label for="warna-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Warna
                                 Produk</label>
-                            <input id="warna-prod" type="search" name="warna"
+                            <input id="warna-prod" type="text" name="warna"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->warna }}" readonly required>
                         </div>
@@ -32,7 +32,7 @@
                             <label for="jumlah-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Jumlah
                                 Produk</label>
-                            <input id="jumlah-prod" type="search" name="jumlah"
+                            <input id="jumlah-prod" type="text" name="jumlah"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->jumlah }}" readonly required>
                         </div>
@@ -40,7 +40,7 @@
                             <label for="mesin-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Mesin
                             </label>
-                            <input id="mesin-prod" type="search" name="mesin"
+                            <input id="mesin-prod" type="text" name="mesin"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->mesin }}" required>
                         </div>
@@ -48,7 +48,7 @@
                             <label for="batch-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Kode Batch
                                 Produk</label>
-                            <input id="batch-prod" type="search" name="batch"
+                            <input id="batch-prod" type="text" name="batch"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->batch }}" readonly required>
                         </div>

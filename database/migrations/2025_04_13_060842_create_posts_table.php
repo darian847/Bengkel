@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
+            $table->string('nama')->unique();
             $table->string('warna');
             $table->string('jumlah');
             $table->string('mesin');
             $table->string('batch');
-            $table->string('penginput');
-            $table->string('cadangan');
+            $table->string('penginput')->nullable;
+            $table->string('cadangan')->nullable;
             $table->timestamps();
         });
     }

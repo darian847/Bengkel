@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('inputs', function (Blueprint $table) {
             $table->id();
-            $table->string('nomesin');
+            $table->string('nama');
+            $table->string('warna');
+            $table->string('jumlah');
+            $table->string('mesin');
+            $table->string('batch');
             $table->string('tanggal');
             $table->string('shift');
             $table->string('namainput');
