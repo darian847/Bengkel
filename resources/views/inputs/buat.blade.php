@@ -6,7 +6,7 @@
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-            {{-- <x-html-print> --}}
+            <x-html-print>
 
             <style type="text/css">
                 a.comment-indicator:hover+div.comment {
@@ -22,7 +22,7 @@
                     display: inline-block;
                     border: 1px solid black;
                     width: 0.5em;
-                    height: 0.5em
+                    height: 0.5em;
                 }
 
                 div.comment {
@@ -400,7 +400,7 @@
 
                 td.style13 {
                     vertical-align: middle;
-                    text-align: left;
+                    text-align: center;
                     padding-left: 0px;
                     border-bottom: 2px solid #000000 !important;
                     border-top: none #000000;
@@ -415,7 +415,7 @@
 
                 th.style13 {
                     vertical-align: middle;
-                    text-align: left;
+                    text-align: center;
                     padding-left: 0px;
                     border-bottom: 2px solid #000000 !important;
                     border-top: none #000000;
@@ -726,11 +726,11 @@
                     <tr class="row0">
                         <td class="column0">&nbsp;</td>
                         <td class="column1 style13 s style13" colspan="3"><span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">©
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt; float:left;">©
                                 Copyright </span>&nbsp;&thinsp;<span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:48pt">CV
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:48pt; text-align:center">CV
                                 ASIA </span>&hairsp;<span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">Form
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt; float:right;">Form
                                 : QC/003/Rev.02</span></td>
                         <td class="column4">&nbsp;</td>
                     </tr>
@@ -781,8 +781,9 @@
                     </tr>
                 </tbody>
             </table>
+            </x-html-print>
         </div>
-        {{-- </x-html-print> --}}
+        
     </main>
 
 </body>

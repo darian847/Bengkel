@@ -13,13 +13,10 @@ class InputController extends Controller
      */
     public function index(Request $request)
     {
-        if (request('search')) {
-            $posts = Post::where('nama', request('search'));
-        }
 
+       
 
-
-        return view('inputs.tunjuk', ['post' => $posts->first()]);
+       return view('inputs.buat');
     }
 
     /**
@@ -33,9 +30,8 @@ class InputController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $id = Inputs::where('id', $id)->latest()->first();
 
         Input::create([
             'nama' => $request->nama,
@@ -49,7 +45,13 @@ class InputController extends Controller
 
         ]);
 
-        return view('inputs.buat', ['input' => $inputs]);
+        if (request('nama')) {
+            $inputs = Input::where('nama', request('nama'));
+        }
+
+
+
+         return view('inputs.buat', ['input' => $inputs->latest()->first()]);
     }
 
     /**
