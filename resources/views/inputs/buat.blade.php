@@ -90,7 +90,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -102,7 +102,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -196,7 +196,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -210,7 +210,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -274,7 +274,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -286,7 +286,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -298,7 +298,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -310,7 +310,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -324,7 +324,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -338,7 +338,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -352,7 +352,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 24pt;
+                    font-size: 22pt;
                     background-color: white
                 }
 
@@ -366,7 +366,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 24pt;
+                    font-size: 22pt;
                     background-color: white
                 }
 
@@ -380,7 +380,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -394,7 +394,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -409,7 +409,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -424,7 +424,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -438,7 +438,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 60pt;
+                    font-size: 55pt;
                     background-color: white
                 }
 
@@ -452,7 +452,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 60pt;
+                    font-size: 55pt;
                     background-color: white
                 }
 
@@ -466,7 +466,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -480,7 +480,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -494,7 +494,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -508,7 +508,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -550,7 +550,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 38pt;
                     background-color: white
                 }
 
@@ -564,7 +564,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 38pt;
                     background-color: white
                 }
 
@@ -635,7 +635,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -650,7 +650,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -679,7 +679,7 @@
                 }
 
                 table.sheet0 tr.row0 {
-                    height: 38pt
+                    height: 5pt
                 }
 
                 table.sheet0 tr.row1 {
@@ -691,7 +691,7 @@
                 }
 
                 table.sheet0 tr.row3 {
-                    height: 100pt
+                    height: 80pt
                 }
 
                 table.sheet0 tr.row4 {
@@ -726,13 +726,13 @@
                     <tr class="row0">
                         <td class="column0">&nbsp;</td>
                         <td class="column1 style13 s style13" colspan="3"><span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt; float:left;">©
-                                Copyright </span>&nbsp;&thinsp;<span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:48pt; text-align:center">CV
-                                ASIA </span>&hairsp;<span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt; float:right;">Form
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">©
+                                Copyright </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:30pt">CV
+                                ASIA </span>&hairsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">Form
                                 : QC/003/Rev.02</span></td>
-                        <td class="column4">&nbsp;</td>
+                        <td class="column4">&nbsp;&nbsp;</td>
                     </tr>
                     <tr class="row1">
                         <td class="column0">&nbsp;</td>

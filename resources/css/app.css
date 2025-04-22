@@ -16,8 +16,7 @@
 
 @media print {
   table {
-width: 15cm;
-margin: auto;
+zoom: 120%;
 
     
   }
