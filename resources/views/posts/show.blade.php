@@ -6,7 +6,7 @@
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-            <x-forsearch></x-forsearch>
+            {{-- <x-forsearch></x-forsearch> --}}
 
             <div style="padding-top: 25px">
                 <form method="POST" action="/inputs" class=" max-w-3xl mx-auto">
@@ -24,7 +24,7 @@
                             <label for="warna-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Warna
                                 Produk</label>
-                            <input id="warna-prod" type="search" name="warna"
+                            <input id="warna-prod" type="text" name="warna"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->warna }}" readonly required>
                         </div>
@@ -32,7 +32,7 @@
                             <label for="jumlah-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Jumlah
                                 Produk</label>
-                            <input id="jumlah-prod" type="search" name="jumlah"
+                            <input id="jumlah-prod" type="text" name="jumlah"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->jumlah }}" readonly required>
                         </div>
@@ -40,7 +40,7 @@
                             <label for="mesin-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Mesin
                             </label>
-                            <input id="mesin-prod" type="search" name="mesin"
+                            <input id="mesin-prod" type="text" name="mesin"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->mesin }}" required>
                         </div>
@@ -48,7 +48,7 @@
                             <label for="batch-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Kode Batch
                                 Produk</label>
-                            <input id="batch-prod" type="search" name="batch"
+                            <input id="batch-prod" type="text" name="batch"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 value="{{ $post->batch }}" readonly required>
                         </div>

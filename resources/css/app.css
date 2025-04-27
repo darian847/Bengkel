@@ -13,3 +13,11 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 @source "../node_modules/flowbite-datepicker";
+
+@media print {
+  table {
+zoom: 120%;
+
+    
+  }
+}

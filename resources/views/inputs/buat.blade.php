@@ -6,7 +6,7 @@
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-            {{-- <x-html-print> --}}
+            <x-html-print>
 
             <style type="text/css">
                 a.comment-indicator:hover+div.comment {
@@ -22,7 +22,7 @@
                     display: inline-block;
                     border: 1px solid black;
                     width: 0.5em;
-                    height: 0.5em
+                    height: 0.5em;
                 }
 
                 div.comment {
@@ -90,7 +90,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -102,7 +102,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -196,7 +196,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -210,7 +210,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -274,7 +274,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -286,7 +286,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -298,7 +298,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -310,7 +310,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -324,7 +324,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -338,7 +338,7 @@
                     border-right: none #000000;
                     color: #000000;
                     font-family: 'Calibri';
-                    font-size: 16pt;
+                    font-size: 15pt;
                     background-color: white
                 }
 
@@ -352,7 +352,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 24pt;
+                    font-size: 22pt;
                     background-color: white
                 }
 
@@ -366,7 +366,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 24pt;
+                    font-size: 22pt;
                     background-color: white
                 }
 
@@ -380,7 +380,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -394,13 +394,13 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 35pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
                 td.style13 {
                     vertical-align: middle;
-                    text-align: left;
+                    text-align: center;
                     padding-left: 0px;
                     border-bottom: 2px solid #000000 !important;
                     border-top: none #000000;
@@ -409,13 +409,13 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
                 th.style13 {
                     vertical-align: middle;
-                    text-align: left;
+                    text-align: center;
                     padding-left: 0px;
                     border-bottom: 2px solid #000000 !important;
                     border-top: none #000000;
@@ -424,7 +424,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -438,7 +438,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 60pt;
+                    font-size: 55pt;
                     background-color: white
                 }
 
@@ -452,7 +452,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 60pt;
+                    font-size: 55pt;
                     background-color: white
                 }
 
@@ -466,7 +466,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -480,7 +480,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -494,7 +494,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -508,7 +508,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -550,7 +550,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 38pt;
                     background-color: white
                 }
 
@@ -564,7 +564,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 48pt;
+                    font-size: 38pt;
                     background-color: white
                 }
 
@@ -635,7 +635,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -650,7 +650,7 @@
                     font-weight: bold;
                     color: #000000;
                     font-family: 'Aptos Display';
-                    font-size: 34pt;
+                    font-size: 28pt;
                     background-color: white
                 }
 
@@ -679,7 +679,7 @@
                 }
 
                 table.sheet0 tr.row0 {
-                    height: 38pt
+                    height: 5pt
                 }
 
                 table.sheet0 tr.row1 {
@@ -691,7 +691,7 @@
                 }
 
                 table.sheet0 tr.row3 {
-                    height: 100pt
+                    height: 80pt
                 }
 
                 table.sheet0 tr.row4 {
@@ -727,12 +727,12 @@
                         <td class="column0">&nbsp;</td>
                         <td class="column1 style13 s style13" colspan="3"><span
                                 style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">©
-                                Copyright </span>&nbsp;&thinsp;<span
-                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:48pt">CV
-                                ASIA </span>&hairsp;<span
+                                Copyright </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:30pt">CV
+                                ASIA </span>&hairsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
                                 style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">Form
                                 : QC/003/Rev.02</span></td>
-                        <td class="column4">&nbsp;</td>
+                        <td class="column4">&nbsp;&nbsp;</td>
                     </tr>
                     <tr class="row1">
                         <td class="column0">&nbsp;</td>
@@ -781,8 +781,9 @@
                     </tr>
                 </tbody>
             </table>
+            </x-html-print>
         </div>
-        {{-- </x-html-print> --}}
+        
     </main>
 
 </body>

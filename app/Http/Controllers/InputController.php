@@ -46,7 +46,7 @@ class InputController extends Controller
 
         ]);
 
-        return redirect('inputs');
+        return redirect('inputs.buat');
     }
 
     /**
