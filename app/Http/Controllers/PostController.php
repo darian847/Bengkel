@@ -19,7 +19,7 @@ class PostController extends Controller
         }
 
 
-        return view('inputs.tunjuk', ['post' => $posts->first()]);
+        return view('posts.show', ['post' => $posts->first()]);
     }
 
     /**

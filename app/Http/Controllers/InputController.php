@@ -5,21 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Input;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class InputController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
-        if (request('search')) {
-            $posts = Post::where('nama', request('search'));
-        }
 
+        $inputs = Input::latest();
 
-
-        return view('inputs.tunjuk', ['post' => $posts->first()]);
+        return view('inputs.tunjuk', ['input' => $inputs]);
     }
 
     /**
@@ -33,9 +31,8 @@ class InputController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        $id = Inputs::where('id', $id)->latest()->first();
 
         Input::create([
             'nama' => $request->nama,
@@ -49,7 +46,7 @@ class InputController extends Controller
 
         ]);
 
-        return view('inputs.buat', ['input' => $inputs]);
+        return redirect('inputs');
     }
 
     /**
@@ -57,7 +54,7 @@ class InputController extends Controller
      */
     public function show(Input $input)
     {
-        //
+        return view('inputs.buat');
     }
 
     /**

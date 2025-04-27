@@ -2,114 +2,787 @@
 
 <body>
     <x-navbar></x-navbar>
-    <x-header>Penginputan Label</x-header>
+    <x-header>Label</x-header>
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-            <x-forsearch></x-forsearch>
+            {{-- <x-html-print> --}}
 
-            <div style="padding-top: 25px">
-                <form method="POST" action="/inputs" class=" max-w-3xl mx-auto">
-                    @csrf
-                    <div class="max-w-screen-xl mx-auto w-auto grid gap-6 mb-6 md:grid-cols-2">
-                        <div class="mb-5">
-                            <label for="nama-prod"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama
-                                Produk</label>
-                            <input id="nama-prod" type="text" name="nama"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->nama }}" readonly required>
-                        </div>
-                        <div class="mb-5">
-                            <label for="warna-prod"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Warna
-                                Produk</label>
-                            <input id="warna-prod" type="text" name="warna"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->warna }}" readonly required>
-                        </div>
-                        <div class="mb-5">
-                            <label for="jumlah-prod"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Jumlah
-                                Produk</label>
-                            <input id="jumlah-prod" type="text" name="jumlah"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->jumlah }}" readonly required>
-                        </div>
-                        <div class="mb-5">
-                            <label for="mesin-prod"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Mesin
-                            </label>
-                            <input id="mesin-prod" type="text" name="mesin"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->mesin }}" required>
-                        </div>
-                        <div class="mb-5">
-                            <label for="batch-prod"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Kode Batch
-                                Produk</label>
-                            <input id="batch-prod" type="text" name="batch"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->batch }}" readonly required>
-                        </div>
-                        <div class="mb-5">
-                            <label for="datepicker-autohide"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Tanggal</label>
-                            <div class="relative max-w-sm">
-                                <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
-                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                        <path
-                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                                    </svg>
-                                </div>
-                                <input id="datepicker-autohide" name="tanggal" datepicker datepicker-autohide
-                                    type="text"
-                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                    placeholder="Pilih Tanggal" autocomplete="off" required>
-                            </div>
+            <style type="text/css">
+                a.comment-indicator:hover+div.comment {
+                    background: #ffd;
+                    position: absolute;
+                    display: block;
+                    border: 1px solid black;
+                    padding: 0.5em
+                }
 
-                        </div>
-                        <div class="mb-5">
-                            <label for="shift-mesin"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Shift</label>
-                            <select type="text" id="shift-meisn" name="shift"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="I/II/III/IV" required>
+                a.comment-indicator {
+                    background: red;
+                    display: inline-block;
+                    border: 1px solid black;
+                    width: 0.5em;
+                    height: 0.5em
+                }
 
-                                <option selected></option>
-                                <option value="I">I</option>
-                                <option value="II">II</option>
-                                <option value="III">III</option>
-                                <option value="IV">IV</option>
+                div.comment {
+                    display: none
+                }
 
-                            </select>
-                        </div>
-                        <div class="mb-5">
-                            <label for="penginput"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama
-                                Penginput</label>
-                            <select list="penginput" type="text" id="penginput" name="namainput"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Nama" required>
+                table {
+                    border-collapse: collapse;
+                    page-break-after: always
+                }
+
+                .b {
+                    text-align: center
+                }
+
+                .e {
+                    text-align: center
+                }
+
+                .f {
+                    text-align: right
+                }
+
+                .inlineStr {
+                    text-align: left
+                }
+
+                .n {
+                    text-align: right
+                }
+
+                .s {
+                    text-align: left
+                }
+
+                td.style0 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Narrow';
+                    font-size: 11pt;
+                    background-color: white
+                }
+
+                th.style0 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Narrow';
+                    font-size: 11pt;
+                    background-color: white
+                }
+
+                td.style1 {
+                    vertical-align: middle;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                th.style1 {
+                    vertical-align: middle;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                td.style2 {
+                    vertical-align: middle;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style2 {
+                    vertical-align: middle;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style3 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style3 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style4 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: 2px solid #000000 !important;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style4 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: 2px solid #000000 !important;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style5 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: 2px solid #000000 !important;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                th.style5 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: 2px solid #000000 !important;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                td.style6 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style6 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style7 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style7 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style8 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 35pt;
+                    background-color: white
+                }
+
+                th.style8 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 35pt;
+                    background-color: white
+                }
+
+                td.style9 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                th.style9 {
+                    vertical-align: bottom;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                td.style10 {
+                    vertical-align: bottom;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                th.style10 {
+                    vertical-align: bottom;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Calibri';
+                    font-size: 16pt;
+                    background-color: white
+                }
+
+                td.style11 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 24pt;
+                    background-color: white
+                }
+
+                th.style11 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 24pt;
+                    background-color: white
+                }
+
+                td.style12 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 35pt;
+                    background-color: white
+                }
+
+                th.style12 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: none #000000;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 35pt;
+                    background-color: white
+                }
+
+                td.style13 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 48pt;
+                    background-color: white
+                }
+
+                th.style13 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 48pt;
+                    background-color: white
+                }
+
+                td.style14 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 60pt;
+                    background-color: white
+                }
+
+                th.style14 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 60pt;
+                    background-color: white
+                }
+
+                td.style15 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                th.style15 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                td.style16 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: 2px solid #000000 !important;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                th.style16 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: none #000000;
+                    border-left: none #000000;
+                    border-right: 2px solid #000000 !important;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                td.style17 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style17 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style18 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 48pt;
+                    background-color: white
+                }
+
+                th.style18 {
+                    vertical-align: middle;
+                    text-align: center;
+                    border-bottom: 2px solid #000000 !important;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 48pt;
+                    background-color: white
+                }
+
+                td.style19 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style19 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style20 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: 2px solid #000000 !important;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                th.style20 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: 2px solid #000000 !important;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 10pt;
+                    background-color: white
+                }
+
+                td.style21 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                th.style21 {
+                    vertical-align: middle;
+                    text-align: left;
+                    padding-left: 0px;
+                    border-bottom: none #000000;
+                    border-top: 2px solid #000000 !important;
+                    border-left: none #000000;
+                    border-right: none #000000;
+                    font-weight: bold;
+                    color: #000000;
+                    font-family: 'Aptos Display';
+                    font-size: 34pt;
+                    background-color: white
+                }
+
+                table.sheet0 col.col0 {
+                    width: 0pt
+                }
+
+                table.sheet0 col.col1 {
+                    width: 80pt
+                }
+
+                table.sheet0 col.col2 {
+                    width: 90.82222118pt
+                }
+
+                table.sheet0 col.col3 {
+                    width: 175pt
+                }
+
+                table.sheet0 col.col4 {
+                    width: 0pt
+                }
+
+                table.sheet0 tr {
+                    height: 15pt
+                }
+
+                table.sheet0 tr.row0 {
+                    height: 38pt
+                }
+
+                table.sheet0 tr.row1 {
+                    height: 6pt
+                }
+
+                table.sheet0 tr.row2 {
+                    height: 9pt
+                }
+
+                table.sheet0 tr.row3 {
+                    height: 100pt
+                }
+
+                table.sheet0 tr.row4 {
+                    height: 9pt
+                }
+
+                table.sheet0 tr.row5 {
+                    height: 30pt
+                }
+
+                table.sheet0 tr.row6 {
+                    height: 24pt
+                }
+
+                table.sheet0 tr.row7 {
+                    height: 12pt
+                }
+
+                table.sheet0 tr.row8 {
+                    height: 8pt
+                }
+            </style>
 
 
-                                <option selected></option>
-                                <option value="Yosi">Yosi</option>
-
-                            </select>
-                        </div>
-                    </div>
-                    <div class="mb-5">
-                        <br>
-
-                        <button type="submit"
-                            class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm mx-auto w-2/3 mb-5 px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-700 dark:focus:ring-blue-600 justify-center flex">Menuju
-                            Halaman Print</button>
-                    </div>
-                </form>
-            </div>
+            <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+                <col class="col0">
+                <col class="col1">
+                <col class="col2">
+                <col class="col3">
+                <col class="col4">
+                <tbody>
+                    <tr class="row0">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style13 s style13" colspan="3"><span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">©
+                                Copyright </span>&nbsp;&thinsp;<span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:48pt">CV
+                                ASIA </span>&hairsp;<span
+                                style="font-weight:bold; color:#000000; font-family:'Aptos Display'; font-size:7pt">Form
+                                : QC/003/Rev.02</span></td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row1">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style18 null style18" colspan="3"></td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row2">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style17 s style17" colspan="3">Nama Produk :</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row3">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style14 s style14" colspan="3">{{ $input->nama }}</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row4">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style19 s style20" colspan="2">Warna :</td>
+                        <td class="column3 style4 s">Jumlah :</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row5">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style15 s style16" colspan="2">{{ $input->warna }}</td>
+                        <td class="column3 style5 s">{{ $input->jumlah }} PCS</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row6">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style6 s">No. Mesin :</td>
+                        <td class="column2 style21 s style21" colspan="2">{{ $input->mesin }}</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row7">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style3 s">Kode Batch : </td>
+                        <td class="column2 style12 null style12" colspan="2"></td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                    <tr class="row8">
+                        <td class="column0">&nbsp;</td>
+                        <td class="column1 style11 s style11" colspan="3">{{ $input->batch }}/{{ $input->tanggal }} -
+                            S{{ $input->shift }}</td>
+                        <td class="column4">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+        {{-- </x-html-print> --}}
     </main>
-    </div>
+
 </body>
