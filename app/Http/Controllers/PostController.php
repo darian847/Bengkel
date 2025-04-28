@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Labela;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -13,13 +14,19 @@ class PostController extends Controller
     public function index(Request $request)
     {
 
-
+        
         if (request('search')) {
-            $posts = Post::where('nama', 'like', '%' . request('search') . '%');
+            $posts = Post::where('nama', request('search'));
         }
 
-
         return view('posts.show', ['post' => $posts->first()]);
+
+        if (request('slabela')) {
+            $labelas = Labela::where('namasa', request('slabela'));
+        }
+
+        return view('posts.show', ['labela' => $labelas->first()]);
+   
     }
 
     /**
