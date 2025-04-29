@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
 Route::view('/', 'home');
+Route::view('/homebuat', 'homebuat');
 Route::view('/searchnormal', 'searchnormal');
 Route::view('/searchlabela', 'searchlabela');
 Route::view('/searchlabelb', 'searchlabela');

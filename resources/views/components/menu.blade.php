@@ -4,7 +4,7 @@
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Pilihan Label</h2>
           <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400"></p>
       </div> 
-      <div class="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 ">
+      <div class="grid gap-8 lg:gap-16 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 ">
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-2xl" src="{{ asset('storage/LabelNormal.jpg') }}" alt="Label Normal">
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

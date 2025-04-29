@@ -54,6 +54,19 @@ class PostController extends Controller
         ]);
 
         return view('posts.create');
+
+        Labela::create([
+            'namasa' => $request->namasa,
+            'warna' => $request->warna,
+            'jumlah' => $request->jumlah,
+            'mesin' => $request->mesin,
+            'batch' => $request->batch,
+            'baris3' => $request->baris3,
+            
+        ]);
+
+        return view('posts.createa');
+    
     }
 
     /**

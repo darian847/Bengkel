@@ -12,7 +12,7 @@
                             <a href="/"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-white   hover:bg-gray-700 hover:text-white"
                                 aria-current="page">Home</a>
-                            <a href="/posts/create"
+                            <a href="/homebuat"
                                 class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white">Tambah
                                 Data</a>
                         </div>
