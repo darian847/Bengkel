@@ -34,8 +34,11 @@ class PostController extends Controller
      */
     public function create()
     {
+
         return view('posts.create');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -55,7 +58,7 @@ class PostController extends Controller
 
         return view('posts.create');
 
-        Labela::create([
+        Labela::createa([
             'namasa' => $request->namasa,
             'warna' => $request->warna,
             'jumlah' => $request->jumlah,

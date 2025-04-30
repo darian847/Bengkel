@@ -1,14 +1,15 @@
 <section class="bg-white dark:bg-gray-900">
+    
   <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
       <div class="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Pilihan Label</h2>
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Form Admin Label</h2>
           <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400"></p>
       </div> 
       <div class="grid gap-8 lg:gap-16 sm:grid-cols-1 md:grid-cols-5 lg:grid-cols-5 ">
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-2xl" src="{{ asset('storage/LabelNormal.jpg') }}" alt="Label Normal">
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="searchnormal">Label CV</a>
+                  <a name="normal" href="/posts/create">Label CV</a>
               </h3>
               <p>Bentuk label normal untuk CV</p>
               
@@ -16,7 +17,7 @@
           <div class="text-center text-gray-500 dark:text-gray-400">
               <img class="mx-auto mb-4 w-36 h-36 rounded-2xl" src="{{ asset('storage/LabelA.jpg') }}" alt="Label A">
               <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <a href="#">Label A</a>
+                  <a name="normala" href="/posts/create">Label A</a>
               </h3>
               <p>Bentuk label dengan variasi A</p>
               
