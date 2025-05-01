@@ -746,7 +746,12 @@
                         </tr>
                         <tr class="row3">
                             <td class="column0">&nbsp;</td>
-                            <td class="column1 style14 s style14" colspan="3">{{ $input->nama }}</td>
+                            <td class="column1 style14 s style14" colspan="3">{{ $plabela->namasa }}</td>
+                            <td class="column4">&nbsp;</td>
+                        </tr>
+                        <tr class="row3">
+                            <td class="column0">&nbsp;</td>
+                            <td class="column1 style14 s style14" colspan="3">{{ $plabela->baris3 }}</td>
                             <td class="column4">&nbsp;</td>
                         </tr>
                         <tr class="row4">
@@ -757,14 +762,14 @@
                         </tr>
                         <tr class="row5">
                             <td class="column0">&nbsp;</td>
-                            <td class="column1 style15 s style16" colspan="2">{{ $input->warna }}</td>
-                            <td class="column3 style5 s">{{ $input->jumlah }} PCS</td>
+                            <td class="column1 style15 s style16" colspan="2">{{ $plabela->warna }}</td>
+                            <td class="column3 style5 s">{{ $plabela->jumlah }} PCS</td>
                             <td class="column4">&nbsp;</td>
                         </tr>
                         <tr class="row6">
                             <td class="column0">&nbsp;</td>
                             <td class="column1 style6 s">No. Mesin :</td>
-                            <td class="column2 style21 s style21" colspan="2">{{ $input->mesin }}</td>
+                            <td class="column2 style21 s style21" colspan="2">{{ $plabela->mesin }}</td>
                             <td class="column4">&nbsp;</td>
                         </tr>
                         <tr class="row7">
@@ -776,8 +781,8 @@
                         <tr class="row8">
                             <td class="column0">&nbsp;</td>
                             <td class="column1 style11 s style11" colspan="3">
-                                {{ $input->batch }}/{{ $input->tanggal }} -
-                                S{{ $input->shift }}</td>
+                                {{ $plabela->batch }}/{{ $plabela->tanggal }} -
+                                S{{ $plabela->shift }}</td>
                             <td class="column4">&nbsp;</td>
                         </tr>
                     </tbody>

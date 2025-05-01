@@ -2,24 +2,22 @@
 
 <body>
     <x-navbar></x-navbar>
-    <x-header>Penginputan Label</x-header>
+    <x-header>Form Input</x-header>
     <main>
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-            {{-- <x-forsearch></x-forsearch> --}}
-
             <div style="padding-top: 25px">
 
-                <form method="POST" action="/inputs" class=" max-w-3xl mx-auto">
+                <form method="POST" action="/inputs/storea" class=" max-w-3xl mx-auto">
                     @csrf
                     <div class="max-w-screen-xl mx-auto w-auto grid gap-6 mb-6 md:grid-cols-2">
                         <div class="mb-5">
                             <label for="nama-prod"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Nama
                                 Produk</label>
-                            <input id="nama-prod" type="search" name="nama"
+                            <input id="nama-prod" type="search" name="namasa"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->nama }}" readonly required>
+                                value="{{ $labela->namasa }}" readonly required>
                         </div>
                         <div class="mb-5">
                             <label for="warna-prod"
@@ -27,7 +25,7 @@
                                 Produk</label>
                             <input id="warna-prod" type="text" name="warna"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->warna }}" readonly required>
+                                value="{{ $labela->warna }}" readonly required>
                         </div>
                         <div class="mb-5">
                             <label for="jumlah-prod"
@@ -35,7 +33,7 @@
                                 Produk</label>
                             <input id="jumlah-prod" type="text" name="jumlah"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->jumlah }}" readonly required>
+                                value="{{ $labela->jumlah }}" readonly required>
                         </div>
                         <div class="mb-5">
                             <label for="mesin-prod"
@@ -43,7 +41,7 @@
                             </label>
                             <input id="mesin-prod" type="text" name="mesin"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->mesin }}" required>
+                                value="{{ $labela->mesin }}" required>
                         </div>
                         <div class="mb-5">
                             <label for="batch-prod"
@@ -51,7 +49,15 @@
                                 Produk</label>
                             <input id="batch-prod" type="text" name="batch"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                value="{{ $post->batch }}" readonly required>
+                                value="{{ $labela->batch }}" readonly required>
+                        </div>
+                        <div class="mb-5">
+                            <label for="batch-prod"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Kode Batch
+                                Produk</label>
+                            <input id="batch-prod" type="text" name="baris3"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                value="{{ $labela->baris3 }}" readonly required>
                         </div>
                         <div class="mb-5">
                             <label for="datepicker-autohide"
@@ -74,7 +80,7 @@
                         <div class="mb-5">
                             <label for="shift-mesin"
                                 class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Shift</label>
-                            <select type="text" id="shift-meisn" name="shift"
+                            <select type="text" id="shift-mesin" name="shift"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="I/II/III/IV" required>
 
@@ -113,4 +119,7 @@
         </div>
     </main>
     </div>
+
 </body>
+
+</html>

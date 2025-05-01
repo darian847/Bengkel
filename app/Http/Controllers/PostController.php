@@ -14,20 +14,26 @@ class PostController extends Controller
     public function index(Request $request)
     {
 
-        
+
         if (request('search')) {
             $posts = Post::where('nama', request('search'));
         }
-
         return view('posts.show', ['post' => $posts->first()]);
+    }
+
+    public function indexa(Request $request)
+    {
+
+
 
         if (request('slabela')) {
             $labelas = Labela::where('namasa', request('slabela'));
         }
 
-        return view('posts.show', ['labela' => $labelas->first()]);
-   
+        return view('posts.showa', ['labela' => $labelas->first()]);
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -38,6 +44,11 @@ class PostController extends Controller
         return view('posts.create');
     }
 
+    public function createa()
+    {
+
+        return view('posts.createa');
+    }
 
 
     /**
@@ -57,19 +68,23 @@ class PostController extends Controller
         ]);
 
         return view('posts.create');
+    }
 
-        Labela::createa([
+    public function storea(Request $request)
+    {
+
+
+        Labela::create([
             'namasa' => $request->namasa,
             'warna' => $request->warna,
             'jumlah' => $request->jumlah,
             'mesin' => $request->mesin,
             'batch' => $request->batch,
             'baris3' => $request->baris3,
-            
+
         ]);
 
         return view('posts.createa');
-    
     }
 
     /**

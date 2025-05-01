@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\InputController;
+use App\Models\Input;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,5 +25,11 @@ Route::view('/searchlabela', 'searchlabela');
 Route::view('/searchlabelb', 'searchlabela');
 Route::view('/searchlabelpt', 'searchlabelpt');
 Route::view('/searchlabelsbd', 'searchlabelsbd');
+Route::get('/posts/createa', [PostController::class, 'createa']);
+Route::post('/posts/storea', [PostController::class, 'storea']);
+Route::get('/posts/showa', [PostController::class, 'indexa']);
+Route::get('/inputs/buata', [InputController::class, 'buata']);
+Route::post('/inputs/storea', [InputController::class, 'storea']);
+Route::get('/inputs/buata', [InputController::class, 'indexa']);
 Route::resource('posts', PostController::class);
 Route::resource('inputs', InputController::class);
