@@ -11,26 +11,11 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
+        $posts = Post::all();
 
-
-        if (request('search')) {
-            $posts = Post::where('nama', request('search'));
-        }
-        return view('posts.show', ['post' => $posts->first()]);
-    }
-
-    public function indexa(Request $request)
-    {
-
-
-
-        if (request('slabela')) {
-            $labelas = Labela::where('namasa', request('slabela'));
-        }
-
-        return view('posts.showa', ['labela' => $labelas->first()]);
+        return view('posts.index', ['posts' => $posts]);
     }
 
 
@@ -44,11 +29,6 @@ class PostController extends Controller
         return view('posts.create');
     }
 
-    public function createa()
-    {
-
-        return view('posts.createa');
-    }
 
 
     /**
@@ -58,33 +38,60 @@ class PostController extends Controller
     {
 
         Post::create([
-            'nama' => $request->nama,
-            'warna' => $request->warna,
-            'jumlah' => $request->jumlah,
-            'mesin' => $request->mesin,
-            'batch' => $request->batch,
-            'penginput' => $request->batch,
-            'cadangan' => $request->batch,
+            'nospk' => $request->nospk,
+            'tanggal1' => $request->tanggal1,
+            'pemohon' => $request->pemohon,
+            'dept' => $request->dept,
+            'nomesin' => $request->nomesin,
+            'uraianbag1' => $request->uraianbag1,
+            'tanggal2' => $request->tanggal2,
+            'tanggal3' => $request->tanggal3,
+            'pekerja' => $request->pekerja,
+            'tanggal4' => $request->tanggal4,
+            'mouldgiver' => $request->mouldgiver,
+            'tindakperbaikan' => $request->tindakperbaikan,
+            'penerimabagus' => $request->penerimabagus,
+            'tanggal5' => $request->tanggal5,
+            'ok' => $request->ok,
+            'gkok' => $request->gkok,
+            'catatan' => $request->catatan,
+            'sinput1' => $request->sinput1,
+            'sinput2' => $request->sinput2,
+            'sinput3' => $request->sinput3,
         ]);
 
         return view('posts.create');
     }
 
-    public function storea(Request $request)
+    public function storea(Request $request, Post $post)
     {
 
 
-        Labela::create([
-            'namasa' => $request->namasa,
-            'warna' => $request->warna,
-            'jumlah' => $request->jumlah,
-            'mesin' => $request->mesin,
-            'batch' => $request->batch,
-            'baris3' => $request->baris3,
 
+        Post::create([
+            'nospk' => $request->nospk,
+            'tanggal1' => $request->tanggal1,
+            'pemohon' => $request->pemohon,
+            'dept' => $request->dept,
+            'nomesin' => $request->nomesin,
+            'uraianbag1' => $request->uraianbag1,
+            'tanggal2' => $request->tanggal2,
+            'tanggal3' => $request->tanggal3,
+            'pekerja' => $request->pekerja,
+            'tanggal4' => $request->tanggal4,
+            'mouldgiver' => $request->mouldgiver,
+            'tindakperbaikan' => $request->tindakperbaikan,
+            'penerimabagus' => $request->penerimabagus,
+            'tanggal5' => $request->tanggal5,
+            'ok' => $request->ok,
+            'gkok' => $request->gkok,
+            'catatan' => $request->catatan,
+            'sinput1' => $request->sinput1,
+            'sinput2' => $request->sinput2,
+            'sinput3' => $request->sinput3,
         ]);
 
-        return view('posts.createa');
+        return view('posts.createa', ['post' => $post]);
     }
 
     /**
@@ -94,7 +101,7 @@ class PostController extends Controller
     {
 
 
-        return view('posts.show', ['post' => $post]);
+        return view('posts.createa', ['post' => $post]);
     }
 
     /**

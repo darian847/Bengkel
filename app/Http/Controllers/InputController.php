@@ -50,14 +50,23 @@ class InputController extends Controller
     {
 
         Input::create([
-            'nama' => $request->nama,
-            'warna' => $request->warna,
-            'jumlah' => $request->jumlah,
-            'mesin' => $request->mesin,
-            'batch' => $request->batch,
-            'tanggal' => $request->tanggal,
-            'shift' => $request->shift,
-            'namainput' => $request->namainput,
+            'nospk' => $request->nama,
+            'tanggal1' => $request->warna,
+            'pemohon' => $request->jumlah,
+            'dept' => $request->mesin,
+            'nomesin' => $request->batch,
+            'uraianbag1' => $request->tanggal,
+            'tanggal2' => $request->shift,
+            'tanggal3' => $request->namainput,
+            'pekerja' => $request->nama,
+            'tanggal4' => $request->warna,
+            'mouldgiver' => $request->jumlah,
+            'tindakperbaikan' => $request->mesin,
+            'penerimabagus' => $request->batch,
+            'tanggal5' => $request->tanggal,
+            'ok' => $request->shift,
+            'gkok' => $request->namainput,
+            'catatan' => $request->nama,
 
         ]);
 

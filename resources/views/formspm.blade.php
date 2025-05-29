@@ -87,22 +87,13 @@
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""></textarea>
                     </div>
-                    <div class="grid gap-6 mb-6 md:grid-cols-2">
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 1" name="sinput1"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sudah
-                                Input Bagian 1</label>
-                        </div>
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 1"
-                                name="sinput1"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Belum
-                                Input Bagian 1</label>
-                        </div>
+                    <div class="mb-6">
+                        <input id="link-checkbox" type="checkbox" value=""
+                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">I
+                            agree with the <a href="#"
+                                class="text-blue-600 dark:text-blue-500 hover:underline">terms and
+                                conditions</a>.</label>
                     </div>
 
 
@@ -201,23 +192,7 @@
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""></textarea>
                     </div>
-                    <div class="grid gap-6 mb-6 md:grid-cols-2">
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 2" name="sinput2"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sudah
-                                Input Bagian 2</label>
-                        </div>
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 2"
-                                name="sinput2"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Belum
-                                Input Bagian 2</label>
-                        </div>
-                    </div>
+
 
                     {{-- BAGIAN 3 --}}
 
@@ -281,23 +256,7 @@
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                             placeholder=""></textarea>
                     </div>
-                    <div class="grid gap-6 mb-6 md:grid-cols-2">
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 3" name="sinput3"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Sudah
-                                Input Bagian 3</label>
-                        </div>
-                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm dark:border-gray-700">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 3"
-                                name="sinput3"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Belum
-                                Input Bagian 3</label>
-                        </div>
-                    </div>
+
                     <button type="submit"
                         class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                 </form>
