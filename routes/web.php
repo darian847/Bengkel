@@ -6,9 +6,9 @@ use App\Models\Input;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('home');
-// });
+Route::get('/', function () {
+    return view('home');
+});
 
 // Route::get('/posts', [PostController::class, 'index']);
 // Route::get('/posts/create', [PostController::class, 'create']);
@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Route::put('/posts/{id}', [PostController::class, 'update']);
 // Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/index', [PostController::class, 'index']);
 Route::view('/homebuat', 'homebuat');
 // Route::view('/searchnormal', 'searchnormal');
 // Route::view('/searchlabela', 'searchlabela');
@@ -29,7 +29,7 @@ Route::view('/homebuat', 'homebuat');
 // Route::view('/spm', 'formspm');
 // Route::get('/posts/createa', [PostController::class, 'createa']);
 Route::post('/posts/storea', [PostController::class, 'storea']);
-// Route::get('/posts/showa', [PostController::class, 'indexa']);
+Route::get('/posts/showa', [PostController::class, 'indexa']);
 // Route::get('/inputs/buata', [InputController::class, 'buata']);
 // Route::post('/inputs/storea', [InputController::class, 'storea']);
 // Route::get('/inputs/buata', [InputController::class, 'indexa']);
