@@ -28,7 +28,7 @@ Route::view('/homebuat', 'homebuat');
 // Route::view('/spk', 'formspk');
 // Route::view('/spm', 'formspm');
 // Route::get('/posts/createa', [PostController::class, 'createa']);
-Route::post('/posts/storea', [PostController::class, 'storea']);
+Route::put('/posts/createa/{post}', [PostController::class, 'storea'])->name('update.createa');
 Route::get('/posts/showa', [PostController::class, 'indexa']);
 // Route::get('/inputs/buata', [InputController::class, 'buata']);
 // Route::post('/inputs/storea', [InputController::class, 'storea']);

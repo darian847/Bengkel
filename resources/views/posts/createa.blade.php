@@ -7,8 +7,9 @@
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             {{-- BAGIAN 1 --}}
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <form method="POST" action="/posts">
+                <form method="POST" action="{{ route('update.createa', $post) }}">
                     @csrf
+                    @method('PUT')
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
                             <h1 class="mb-4 text-2xl font-bold text-gray-900  md:text-2xl lg:text-2xl">
@@ -20,16 +21,15 @@
                         <div>
                         </div>
                         <div>
-                            <label for="first_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">SPK
+                            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 ">SPK
                                 NO :</label>
                             <input type="text" id="first_name" name="nospk" value="{{ $post->nospk }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
                         <div>
-                            <label for="last_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL :</label>
+                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL
+                                :</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                                     <svg class="w-4 h-4 text-gray-500 " aria-hidden="true"
@@ -45,16 +45,15 @@
                             </div>
                         </div>
                         <div>
-                            <label for="company"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">PEMOHON :
+                            <label for="company" class="block mb-2 text-sm font-medium text-gray-900 ">PEMOHON :
                             </label>
                             <input type="text" id="company" name="pemohon"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
                         <div>
-                            <label for="shift-mesin"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">DEPARTEMEN / BAGIAN
+                            <label for="shift-mesin" class="block mb-2 text-sm font-medium text-gray-900 ">DEPARTEMEN /
+                                BAGIAN
                                 :
                             </label>
                             <select type="text" id="shift-meisn" name="dept"
@@ -80,8 +79,7 @@
                             placeholder="" />
                     </div>
                     <div class="mb-6">
-                        <label for="message"
-                            class="block mb-2 text-sm font-medium text-gray-900 ">URAIAN
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">URAIAN
                             KERUSAKAN :</label>
                         <textarea id="message" rows="4" name="uraianbag1"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
@@ -119,8 +117,7 @@
                         <div>
                         </div>
                         <div>
-                            <label for="last_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">ESTIMASI
+                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">ESTIMASI
                                 PENYELESAIAN :</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -137,8 +134,8 @@
                             </div>
                         </div>
                         <div>
-                            <label for="last_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL PENGERJAAN
+                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL
+                                PENGERJAAN
                                 :</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -155,8 +152,8 @@
                             </div>
                         </div>
                         <div>
-                            <label for="company"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">YANG MENGERJAKAN :
+                            <label for="company" class="block mb-2 text-sm font-medium text-gray-900 ">YANG
+                                MENGERJAKAN :
 
                             </label>
                             <input type="text" id="company" name="pekerja"
@@ -164,8 +161,7 @@
                                 placeholder="" />
                         </div>
                         <div>
-                            <label for="last_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL
+                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL
                                 PENYELESAIAN
                                 :</label>
                             <div class="relative">
@@ -184,8 +180,8 @@
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label for="email"
-                            class="block mb-2 text-sm font-medium text-gray-900 ">YANG MENYERAHKAN MOULD
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-900 ">YANG MENYERAHKAN
+                            MOULD
                             :
 
                         </label>
@@ -194,8 +190,7 @@
                             placeholder="" />
                     </div>
                     <div class="mb-6">
-                        <label for="message"
-                            class="block mb-2 text-sm font-medium text-gray-900 ">TINDAKAN PERBAIKAN
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">TINDAKAN PERBAIKAN
                             :</label>
                         <textarea id="message" rows="4" name="tindakperbaikan"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
@@ -233,16 +228,15 @@
                         <div>
                         </div>
                         <div>
-                            <label for="first_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">PENERIMA :
+                            <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 ">PENERIMA :
                             </label>
                             <input type="text" id="first_name" name="penerimabagus"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
                         <div>
-                            <label for="last_name"
-                                class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL TRIAL /
+                            <label for="last_name" class="block mb-2 text-sm font-medium text-gray-900 ">TANGGAL TRIAL
+                                /
                                 PRODUKSI :</label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -264,19 +258,16 @@
                         <div class="flex items-center mb-4">
                             <input id="default-radio-1" type="radio" value="" name="ok"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="default-radio-1"
-                                class="ms-2 text-sm font-medium text-gray-900 ">OK</label>
+                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 ">OK</label>
                         </div>
                         <div class="flex items-center">
                             <input id="default-radio-2" type="radio" value="" name="gkok"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="default-radio-2"
-                                class="ms-2 text-sm font-medium text-gray-900 ">TIDAK</label>
+                            <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 ">TIDAK</label>
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label for="message"
-                            class="block mb-2 text-sm font-medium text-gray-900 ">CATATAN :</label>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">CATATAN :</label>
                         <textarea id="message" rows="4" name="catatan"
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
                             placeholder=""></textarea>

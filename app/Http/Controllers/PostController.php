@@ -66,9 +66,15 @@ class PostController extends Controller
     public function storea(Request $request, Post $post)
     {
 
+        $request->validate([
+            'nospk' => ['required'],
 
 
-        Post::create([
+        ]);
+
+
+        // Update the attributes
+        $post->update([
             'nospk' => $request->nospk,
             'tanggal1' => $request->tanggal1,
             'pemohon' => $request->pemohon,
@@ -91,7 +97,8 @@ class PostController extends Controller
             'sinput3' => $request->sinput3,
         ]);
 
-        return view('posts.createa', ['post' => $post]);
+        // return redirect()->back()->with('pesan', 'Form Teredit');
+        return redirect('/posts/index');
     }
 
     /**
