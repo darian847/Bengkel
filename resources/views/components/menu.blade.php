@@ -16,7 +16,7 @@
             <div class="text-center text-gray-500 ">
                 <img class="mx-auto mb-4 w-36 h-36 rounded-2xl" src="{{ asset('storage/e.png') }}" alt="Label A">
                 <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
-                    <a href="/posts/create">SPK</a>
+                    <a href="buat">SPK</a>
                 </h3>
                 <p>Surat Perintah Kerja</p>
 

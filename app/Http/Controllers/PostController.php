@@ -18,7 +18,12 @@ class PostController extends Controller
         return view('posts.index', ['posts' => $posts]);
     }
 
+    public function indexa()
+    {
+        $labelas = Labela::all();
 
+        return view('posts.indexa', ['labelas' => $labelas]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -36,6 +41,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
 
         Post::create([
             'nospk' => $request->nospk,
@@ -60,10 +66,27 @@ class PostController extends Controller
             'sinput3' => $request->sinput3,
         ]);
 
-        return view('posts.create');
+        return redirect('/posts/index');
     }
 
-    public function storea(Request $request, Post $post)
+    public function storea(Request $request)
+    {
+
+
+        Labela::create([
+            'nospk' => $request->nospk,
+            'kepada' => $request->kepada,
+            'jenisrepair' => $request->jenisrepair,
+            'keterangan' => $request->keterangan,
+            'estimasi' => $request->estimasi,
+            'sinput1' => $request->sinput1,
+        ]);
+
+        return redirect('/posts/indexa');
+    }
+
+
+    public function updatea(Request $request, Post $post)
     {
 
         $request->validate([
@@ -71,7 +94,6 @@ class PostController extends Controller
 
 
         ]);
-
 
         // Update the attributes
         $post->update([

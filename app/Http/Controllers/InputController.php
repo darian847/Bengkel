@@ -50,32 +50,18 @@ class InputController extends Controller
     {
 
         Input::create([
-            'nospk' => $request->nama,
-            'tanggal1' => $request->warna,
-            'pemohon' => $request->jumlah,
-            'dept' => $request->mesin,
-            'nomesin' => $request->batch,
-            'uraianbag1' => $request->tanggal,
-            'tanggal2' => $request->shift,
-            'tanggal3' => $request->namainput,
-            'pekerja' => $request->nama,
-            'tanggal4' => $request->warna,
-            'mouldgiver' => $request->jumlah,
-            'tindakperbaikan' => $request->mesin,
-            'penerimabagus' => $request->batch,
-            'tanggal5' => $request->tanggal,
-            'ok' => $request->shift,
-            'gkok' => $request->namainput,
-            'catatan' => $request->nama,
+            'nospk' => $request->nospk,
+            'kepada' => $request->kepada,
+            'jenisrepair' => $request->jenisrepair,
+            'keterangan' => $request->keterangan,
+            'estimasi' => $request->estimasi,
+            'sinput1' => $request->sinput1,
+
 
         ]);
 
-        if (request('nama')) {
-            $inputs = Input::where('nama', request('nama'));
-        }
 
-
-        return view('inputs.buat', ['input' => $inputs->latest()->first()]);
+        return view('inputs.buat');
     }
 
     public function storea(Request $request)

@@ -9,5 +9,5 @@ class Labela extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['namasa', 'warna', 'jumlah', 'mesin', 'batch', 'baris3'];
+    protected $fillable = ['nospk', 'kepada', 'jenisrepair', 'keterangan', 'estimasi', 'sinput1'];
 }

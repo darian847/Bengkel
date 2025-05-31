@@ -7,9 +7,9 @@
         <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
             {{-- BAGIAN 1 --}}
             <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-                <form method="POST" action="/posts">
+                <form method="POST" action="{{ route('store.buat') }}">
                     @csrf
-
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
                             <label for="first_name"
                                 class="block mb-2 text-sm font-medium text-gray-900 ">SPK
@@ -50,7 +50,7 @@
                             class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500    "
                             placeholder=""></textarea>
                     </div>
-                    <div>
+                    <div class="mb-6">
                             <label for="last_name"
                                 class="block mb-2 text-sm font-medium text-gray-900 ">ESTIMASI PENYELESAIAN :</label>
                             <div class="relative">
@@ -69,13 +69,14 @@
                         </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
-                            <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 1" name="sinput1"
+                            <input id="bordered-radio-1" type="radio" value="Ada Estimasi Penyelesaian" name="sinput1"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2">
                             <label for="bordered-radio-1"
                                 class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Ada Estimasi Penyelesaian</label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 1"
+                            <input checked id="bordered-radio-2" type="radio" value="Belum
+                                Ada Estimasi Penyelesaian"
                                 name="sinput1"
                                 class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500   focus:ring-2">
                             <label for="bordered-radio-2"

@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('labelas', function (Blueprint $table) {
             $table->id();
-            $table->string('namasa')->unique();
-            $table->string('warna');
-            $table->string('jumlah');
-            $table->string('mesin');
-            $table->string('batch');
-            $table->string('baris3');
+            $table->string('nospk')->unique();
+            $table->string('kepada')->nullable();
+            $table->string('jenisrepair')->nullable();
+            $table->string('keterangan')->nullable();
+            $table->string('estimasi')->nullable();
+            $table->string('sinput1')->nullable();
             $table->timestamps();
         });
     }

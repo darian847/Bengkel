@@ -18,8 +18,19 @@ Route::get('/', function () {
 // Route::put('/posts/{id}', [PostController::class, 'update']);
 // Route::delete('/posts/{id}', [PostController::class, 'destroy']);
 
-Route::get('/posts/index', [PostController::class, 'index']);
+// POST CONTROLLER
 Route::view('/homebuat', 'homebuat');
+Route::view('/buat', 'buat');
+
+Route::get('/posts/index', [PostController::class, 'index']);
+Route::post('/buat', [PostController::class, 'storea'])->name('store.buat');
+Route::put('/posts/createa/{post}', [PostController::class, 'updatea'])->name('update.createa');
+Route::get('/posts/indexa', [PostController::class, 'indexa']);
+Route::resource('posts', PostController::class);
+
+
+// SPK
+// Route::resource('inputs', InputController::class);
 // Route::view('/searchnormal', 'searchnormal');
 // Route::view('/searchlabela', 'searchlabela');
 // Route::view('/searchlabelb', 'searchlabela');
@@ -28,10 +39,6 @@ Route::view('/homebuat', 'homebuat');
 // Route::view('/spk', 'formspk');
 // Route::view('/spm', 'formspm');
 // Route::get('/posts/createa', [PostController::class, 'createa']);
-Route::put('/posts/createa/{post}', [PostController::class, 'storea'])->name('update.createa');
-Route::get('/posts/showa', [PostController::class, 'indexa']);
 // Route::get('/inputs/buata', [InputController::class, 'buata']);
-// Route::post('/inputs/storea', [InputController::class, 'storea']);
 // Route::get('/inputs/buata', [InputController::class, 'indexa']);
-Route::resource('posts', PostController::class);
-Route::resource('inputs', InputController::class);
+
