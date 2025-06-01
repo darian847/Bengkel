@@ -38,7 +38,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input id="datepicker-autohide1" name="tanggal1" datepicker datepicker-autohide
+                                <input id="datepicker-autohide1" name="tanggal1"
+                                    value="{{ old('tanggal1', $post->tanggal1) }}" datepicker datepicker-autohide
                                     type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                                     placeholder="" autocomplete="off">
@@ -47,24 +48,25 @@
                         <div>
                             <label for="company" class="block mb-2 text-sm font-medium text-gray-900 ">PEMOHON :
                             </label>
-                            <input type="text" id="company" name="pemohon"
+                            <input type="text" id="company" name="pemohon" value="{{ $post->pemohon }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
                         <div>
-                            <label for="shift-mesin" class="block mb-2 text-sm font-medium text-gray-900 ">DEPARTEMEN /
-                                BAGIAN
-                                :
+                            <label for="shift-mesin" class="block mb-2 text-sm font-medium text-gray-900">
+                                DEPARTEMEN / BAGIAN :
                             </label>
-                            <select type="text" id="shift-meisn" name="dept"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 "
+                            <select id="shift-meisn" name="dept"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5"
                                 placeholder="DEPARTEMENT">
 
-                                <option selected></option>
-                                <option value="PRODUKSI">PRODUKSI</option>
-                                <option value="QC">QC</option>
-                                <option value="TEKNIK">TEKNIK</option>
-                                <option value="LAINNYA">LAINNYA</option>
+                                <option {{ $post->dept == '' ? 'selected' : '' }} value=""></option>
+                                <option {{ $post->dept == 'PRODUKSI' ? 'selected' : '' }} value="PRODUKSI">PRODUKSI
+                                </option>
+                                <option {{ $post->dept == 'QC' ? 'selected' : '' }} value="QC">QC</option>
+                                <option {{ $post->dept == 'TEKNIK' ? 'selected' : '' }} value="TEKNIK">TEKNIK</option>
+                                <option {{ $post->dept == 'LAINNYA' ? 'selected' : '' }} value="LAINNYA">LAINNYA
+                                </option>
 
                             </select>
                         </div>
@@ -74,7 +76,7 @@
                             class="block mb-2 text-sm font-medium text-gray-900 ">NAMA/NO.MESIN/NO.MOULDING
                             :
                         </label>
-                        <input type="text" id="email" name="nomesin"
+                        <input type="text" id="email" name="nomesin" value="{{ $post->nomesin }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                             placeholder="" />
                     </div>
@@ -82,24 +84,25 @@
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">URAIAN
                             KERUSAKAN :</label>
                         <textarea id="message" rows="4" name="uraianbag1"
-                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                            placeholder=""></textarea>
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="">{{ old('uraianbag1', $post->uraianbag1) }}</textarea>
                     </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
                             <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 1" name="sinput1"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Sudah
-                                Input Bagian 1</label>
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput1', $post->sinput1) == 'Sudah Input Bagian 1' ? 'checked' : '' }}>
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Sudah Input Bagian 1
+                            </label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 1"
-                                name="sinput1"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Belum
-                                Input Bagian 1</label>
+                            <input id="bordered-radio-2" type="radio" value="Belum Input Bagian 1" name="sinput1"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput1', $post->sinput1) == 'Belum Input Bagian 1' ? 'checked' : '' }}>
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Belum Input Bagian 1
+                            </label>
                         </div>
                     </div>
 
@@ -127,7 +130,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input id="datepicker-autohide2" name="tanggal2" datepicker datepicker-autohide
+                                <input id="datepicker-autohide2" name="tanggal2"
+                                    value="{{ old('tanggal2', $post->tanggal2) }}" datepicker datepicker-autohide
                                     type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                                     placeholder="" autocomplete="off">
@@ -145,7 +149,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input id="datepicker-autohide3" name="tanggal3" datepicker datepicker-autohide
+                                <input id="datepicker-autohide3" name="tanggal3"
+                                    value="{{ old('tanggal3', $post->tanggal3) }}" datepicker datepicker-autohide
                                     type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                                     placeholder="" autocomplete="off">
@@ -156,7 +161,7 @@
                                 MENGERJAKAN :
 
                             </label>
-                            <input type="text" id="company" name="pekerja"
+                            <input type="text" id="company" name="pekerja" value="{{ $post->pekerja }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
@@ -172,7 +177,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input id="datepicker-autohide4" name="tanggal4" datepicker datepicker-autohide
+                                <input id="datepicker-autohide4" name="tanggal4"
+                                    value="{{ old('tanggal4', $post->tanggal4) }}" datepicker datepicker-autohide
                                     type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                                     placeholder="" autocomplete="off">
@@ -185,7 +191,7 @@
                             :
 
                         </label>
-                        <input type="text" id="email" name="mouldgiver"
+                        <input type="text" id="email" name="mouldgiver" value="{{ $post->mouldgiver }}"
                             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                             placeholder="" />
                     </div>
@@ -193,24 +199,25 @@
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">TINDAKAN PERBAIKAN
                             :</label>
                         <textarea id="message" rows="4" name="tindakperbaikan"
-                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                            placeholder=""></textarea>
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="">{{ old('tindakperbaikan', $post->tindakperbaikan) }}</textarea>
                     </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
                             <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 2" name="sinput2"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Sudah
-                                Input Bagian 2</label>
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput2', $post->sinput2) == 'Sudah Input Bagian 2' ? 'checked' : '' }}>
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Sudah Input Bagian 2
+                            </label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 2"
-                                name="sinput2"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Belum
-                                Input Bagian 2</label>
+                            <input id="bordered-radio-2" type="radio" value="Belum Input Bagian 2" name="sinput2"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput2', $post->sinput2) == 'Belum Input Bagian 2' ? 'checked' : '' }}>
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Belum Input Bagian 2
+                            </label>
                         </div>
                     </div>
 
@@ -231,6 +238,7 @@
                             <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 ">PENERIMA :
                             </label>
                             <input type="text" id="first_name" name="penerimabagus"
+                                value="{{ $post->penerimabagus }}"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
                                 placeholder="" />
                         </div>
@@ -246,7 +254,8 @@
                                             d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                                     </svg>
                                 </div>
-                                <input id="datepicker-autohide" name="tanggal5" datepicker datepicker-autohide
+                                <input id="datepicker-autohide" name="tanggal5"
+                                    value="{{ old('tanggal5', $post->tanggal5) }}" datepicker datepicker-autohide
                                     type="text"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  "
                                     placeholder="" autocomplete="off">
@@ -254,39 +263,46 @@
                         </div>
 
                     </div>
-                    <div class="mb-6">
-                        <div class="flex items-center mb-4">
-                            <input id="default-radio-1" type="radio" value="" name="ok"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="default-radio-1" class="ms-2 text-sm font-medium text-gray-900 ">OK</label>
+                    <div class="grid gap-6 mb-6 md:grid-cols-2">
+                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
+                            <input id="bordered-radio-1" type="radio" value="OK" name="ok"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('ok', $post->ok) == 'OK' ? 'checked' : '' }}>
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                OK
+                            </label>
                         </div>
-                        <div class="flex items-center">
-                            <input id="default-radio-2" type="radio" value="" name="gkok"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="default-radio-2" class="ms-2 text-sm font-medium text-gray-900 ">TIDAK</label>
+                        <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
+                            <input id="bordered-radio-2" type="radio" value="TIDAK" name="gkok"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('gkok', $post->gkok) == 'TIDAK' ? 'checked' : '' }}>
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                TIDAK
+                            </label>
                         </div>
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 ">CATATAN :</label>
                         <textarea id="message" rows="4" name="catatan"
-                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                            placeholder=""></textarea>
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                            placeholder="">{{ old('catatan', $post->catatan) }}</textarea>
                     </div>
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
                             <input id="bordered-radio-1" type="radio" value="Sudah Input Bagian 3" name="sinput3"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-1"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Sudah
-                                Input Bagian 3</label>
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput3', $post->sinput3) == 'Sudah Input Bagian 3' ? 'checked' : '' }}>
+                            <label for="bordered-radio-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Sudah Input Bagian 3
+                            </label>
                         </div>
                         <div class="flex items-center ps-4 border border-gray-200 rounded-sm ">
-                            <input checked id="bordered-radio-2" type="radio" value="Belum Input Bagian 3"
-                                name="sinput3"
-                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 ">
-                            <label for="bordered-radio-2"
-                                class="w-full py-4 ms-2 text-sm font-medium text-gray-900 ">Belum
-                                Input Bagian 3</label>
+                            <input id="bordered-radio-2" type="radio" value="Belum Input Bagian 3" name="sinput3"
+                                class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500"
+                                {{ old('sinput3', $post->sinput3) == 'Belum Input Bagian 3' ? 'checked' : '' }}>
+                            <label for="bordered-radio-2" class="w-full py-4 ms-2 text-sm font-medium text-gray-900">
+                                Belum Input Bagian 3
+                            </label>
                         </div>
                     </div>
                     <button type="submit"

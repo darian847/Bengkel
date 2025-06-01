@@ -21,10 +21,11 @@ Route::get('/', function () {
 // POST CONTROLLER
 Route::view('/homebuat', 'homebuat');
 Route::view('/buat', 'buat');
-
 Route::get('/posts/index', [PostController::class, 'index']);
 Route::post('/buat', [PostController::class, 'storea'])->name('store.buat');
 Route::put('/posts/createa/{post}', [PostController::class, 'updatea'])->name('update.createa');
+Route::put('/buata/{labela}', [PostController::class, 'updateas'])->name('update.buata');
+Route::get('/buata/{labela}', [PostController::class, 'showa']);
 Route::get('/posts/indexa', [PostController::class, 'indexa']);
 Route::resource('posts', PostController::class);
 
@@ -41,4 +42,3 @@ Route::resource('posts', PostController::class);
 // Route::get('/posts/createa', [PostController::class, 'createa']);
 // Route::get('/inputs/buata', [InputController::class, 'buata']);
 // Route::get('/inputs/buata', [InputController::class, 'indexa']);
-

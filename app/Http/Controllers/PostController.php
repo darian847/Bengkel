@@ -13,14 +13,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->get();
 
         return view('posts.index', ['posts' => $posts]);
     }
 
     public function indexa()
     {
-        $labelas = Labela::all();
+        $labelas = Labela::latest()->get();
 
         return view('posts.indexa', ['labelas' => $labelas]);
     }
@@ -123,6 +123,32 @@ class PostController extends Controller
         return redirect('/posts/index');
     }
 
+    public function updateas(Request $request, Labela $labela)
+    {
+
+
+        $request->validate([
+            'nospk' => ['required'],
+
+
+        ]);
+
+        // Update the attributes
+        $labela->update([
+            'nospk' => $request->nospk,
+            'kepada' => $request->kepada,
+            'jenisrepair' => $request->jenisrepair,
+            'keterangan' => $request->keterangan,
+            'estimasi' => $request->estimasi,
+            'sinput1' => $request->sinput1,
+        ]);
+
+
+
+
+        // return redirect()->back()->with('pesan', 'Form Teredit');
+        return redirect('/posts/indexa');
+    }
     /**
      * Display the specified resource.
      */
@@ -131,6 +157,13 @@ class PostController extends Controller
 
 
         return view('posts.createa', ['post' => $post]);
+    }
+
+    public function showa(Labela $labela)
+    {
+
+
+        return view('/buata', ['labela' => $labela]);
     }
 
     /**
